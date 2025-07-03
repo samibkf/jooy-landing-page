@@ -78,7 +78,7 @@ const HowItWorksSection = () => {
                     </defs>
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold mb-3 group-hover:text-gradient transition-colors duration-300">
+                <h3 className={`text-xl font-semibold mb-3 transition-colors duration-300 ${i18n.language === 'ar' ? 'group-hover:text-gradient-rtl' : 'group-hover:text-gradient'}`}>
                   {step.title}
                 </h3>
                 <p className="text-gray-600">

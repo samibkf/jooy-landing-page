@@ -76,7 +76,7 @@ const HeroSection = () => {
                 {t('hero.startCreating')}
               </button>
               <button className="glass hover:glass-dark px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 flex items-center justify-center group">
-                <Play className={`${i18n.language === 'ar' ? 'ml-2' : 'mr-2'} group-hover:text-gradient transition-colors duration-300`} size={20} />
+                <Play className={`${i18n.language === 'ar' ? 'ml-2' : 'mr-2'} transition-colors duration-300 ${i18n.language === 'ar' ? 'group-hover:text-gradient-rtl' : 'group-hover:text-gradient'}`} size={20} />
                 {t('hero.seeDemo')}
               </button>
             </div>

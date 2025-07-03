@@ -4,7 +4,7 @@ import { LayoutGrid, Sparkles, MessageCircle, Lock, QrCode, UserRound, MousePoin
 import { useTranslation } from 'react-i18next';
 
 const FeaturesSection = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [activeTab, setActiveTab] = useState('studio');
 
   const studioFeatures = [
@@ -75,7 +75,7 @@ const FeaturesSection = () => {
               className={`px-6 py-3 rounded-md font-medium transition-all duration-300 ${
                 activeTab === 'studio' 
                   ? 'gradient-brand text-white shadow-lg' 
-                  : 'text-gray-600 hover:text-gradient'
+                  : `text-gray-600 ${i18n.language === 'ar' ? 'hover:text-gradient-rtl' : 'hover:text-gradient'}`
               }`}
             >
               {t('features.studioTab')}
@@ -86,7 +86,7 @@ const FeaturesSection = () => {
               className={`px-6 py-3 rounded-md font-medium transition-all duration-300 ${
                 activeTab === 'app' 
                   ? 'gradient-brand text-white shadow-lg' 
-                  : 'text-gray-600 hover:text-gradient'
+                  : `text-gray-600 ${i18n.language === 'ar' ? 'hover:text-gradient-rtl' : 'hover:text-gradient'}`
               }`}
             >
               {t('features.appTab')}
@@ -119,7 +119,7 @@ const FeaturesSection = () => {
                     </defs>
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold mb-3 group-hover:text-gradient transition-colors duration-300">
+                <h3 className={`text-xl font-semibold mb-3 transition-colors duration-300 ${i18n.language === 'ar' ? 'group-hover:text-gradient-rtl' : 'group-hover:text-gradient'}`}>
                   {feature.title}
                 </h3>
                 <p className="text-gray-600">

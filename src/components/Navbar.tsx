@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
 
 const Navbar = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -32,13 +32,13 @@ const Navbar = () => {
                 <a href="#" className="px-3 py-2 rounded-md text-sm font-medium glass hover:glass-dark text-gradient transition-all duration-300">
                   {t('navbar.home')}
                 </a>
-                <a href="#" className="px-3 py-2 rounded-md text-sm font-medium hover:glass hover:text-gradient transition-all duration-300">
+                <a href="#" className={`px-3 py-2 rounded-md text-sm font-medium hover:glass transition-all duration-300 ${i18n.language === 'ar' ? 'hover:text-gradient-rtl' : 'hover:text-gradient'}`}>
                   {t('navbar.features')}
                 </a>
-                <a href="#" className="px-3 py-2 rounded-md text-sm font-medium hover:glass hover:text-gradient transition-all duration-300">
+                <a href="#" className={`px-3 py-2 rounded-md text-sm font-medium hover:glass transition-all duration-300 ${i18n.language === 'ar' ? 'hover:text-gradient-rtl' : 'hover:text-gradient'}`}>
                   {t('navbar.pricing')}
                 </a>
-                <a href="#" className="px-3 py-2 rounded-md text-sm font-medium hover:glass hover:text-gradient transition-all duration-300">
+                <a href="#" className={`px-3 py-2 rounded-md text-sm font-medium hover:glass transition-all duration-300 ${i18n.language === 'ar' ? 'hover:text-gradient-rtl' : 'hover:text-gradient'}`}>
                   {t('navbar.contact')}
                 </a>
               </div>
@@ -47,7 +47,7 @@ const Navbar = () => {
           <div className="hidden md:block">
             <div className="mr-4 flex items-center md:mr-6 space-x-reverse space-x-6">
               <LanguageSwitcher />
-              <button className="glass hover:glass-dark px-4 py-2 rounded-md text-sm font-medium hover:text-gradient transition-all duration-300 ml-2">
+              <button className={`glass hover:glass-dark px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 ml-2 ${i18n.language === 'ar' ? 'hover:text-gradient-rtl' : 'hover:text-gradient'}`}>
                 {t('navbar.login')}
               </button>
               <button className="gradient-brand text-white hover:opacity-90 px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 transform hover:scale-105">
@@ -72,13 +72,13 @@ const Navbar = () => {
           <a href="#" className="block px-3 py-2 rounded-md text-base font-medium glass text-gradient">
             {t('navbar.home')}
           </a>
-          <a href="#" className="block px-3 py-2 rounded-md text-base font-medium hover:glass hover:text-gradient transition-all duration-300">
+          <a href="#" className={`block px-3 py-2 rounded-md text-base font-medium hover:glass transition-all duration-300 ${i18n.language === 'ar' ? 'hover:text-gradient-rtl' : 'hover:text-gradient'}`}>
             {t('navbar.features')}
           </a>
-          <a href="#" className="block px-3 py-2 rounded-md text-base font-medium hover:glass hover:text-gradient transition-all duration-300">
+          <a href="#" className={`block px-3 py-2 rounded-md text-base font-medium hover:glass transition-all duration-300 ${i18n.language === 'ar' ? 'hover:text-gradient-rtl' : 'hover:text-gradient'}`}>
             {t('navbar.pricing')}
           </a>
-          <a href="#" className="block px-3 py-2 rounded-md text-base font-medium hover:glass hover:text-gradient transition-all duration-300">
+          <a href="#" className={`block px-3 py-2 rounded-md text-base font-medium hover:glass transition-all duration-300 ${i18n.language === 'ar' ? 'hover:text-gradient-rtl' : 'hover:text-gradient'}`}>
             {t('navbar.contact')}
           </a>
           <div className="space-y-2 mt-2">

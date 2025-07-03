@@ -4,7 +4,7 @@ import { UserPen, University, LibraryBig } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const UseCasesSection = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const useCases = [
     {
@@ -67,14 +67,14 @@ const UseCasesSection = () => {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 group-hover:text-gradient transition-colors duration-300">{useCase.title}</h4>
+                    <h4 className={`font-semibold text-gray-900 transition-colors duration-300 ${i18n.language === 'ar' ? 'group-hover:text-gradient-rtl' : 'group-hover:text-gradient'}`}>{useCase.title}</h4>
                     <p className="text-sm text-gradient-dark">{useCase.role}</p>
                   </div>
                 </div>
                 <p className="text-gray-600 mb-4">
                   "{useCase.description}"
                 </p>
-                <div className="text-sm font-bold text-gray-900 group-hover:text-gradient transition-colors duration-300">
+                <div className={`text-sm font-bold text-gray-900 transition-colors duration-300 ${i18n.language === 'ar' ? 'group-hover:text-gradient-rtl' : 'group-hover:text-gradient'}`}>
                   {useCase.benefit}
                 </div>
               </div>
