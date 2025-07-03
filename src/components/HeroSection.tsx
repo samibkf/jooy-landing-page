@@ -90,7 +90,7 @@ const HeroSection = () => {
                 muted
                 playsInline
                 preload="metadata"
-                className="rounded-xl shadow-2xl w-60 h-[28rem] object-cover mx-auto"
+                className="rounded-xl shadow-2xl w-60 h-[28rem] object-contain mx-auto"
                 aria-label="Digital Learning Experience Demo"
               />
             </div>
