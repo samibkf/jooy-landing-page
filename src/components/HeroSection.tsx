@@ -23,7 +23,7 @@ const HeroSection = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-10 leading-tight">
               {i18n.language === 'ar' ? (
                 <>
-                  {t('hero.ellipsis')} <span className="text-gradient-rtl">{t('hero.paperBook')}</span> {t('hero.to')}
+                  {t('hero.title')} <span className="text-gradient-rtl">{t('hero.paperBook')}</span> {t('hero.to')}{t('hero.ellipsis')}
                 </>
               ) : (
                 <>
