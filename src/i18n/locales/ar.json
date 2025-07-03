@@ -9,7 +9,9 @@
   },
   "hero": {
     "title": "من",
-    "paperBook": "كتاب ورقي...",
+    "paperBook": "كتاب ورقي",
+    "ellipsis": "...",
+    "to": "إلى",
     "interactiveBook": "كتاب تفاعلي",
     "poweredByAI": "مدعوم بالذكاء الاصطناعي",
     "withVirtualTutor": "مع معلم افتراضي",

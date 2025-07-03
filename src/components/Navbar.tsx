@@ -45,7 +45,7 @@ const Navbar = () => {
             </div>
           </div>
           <div className="hidden md:block">
-            <div className="mr-4 flex items-center md:mr-6 space-x-reverse space-x-4">
+            <div className="mr-4 flex items-center md:mr-6 space-x-reverse space-x-6">
               <LanguageSwitcher />
               <button className="glass hover:glass-dark px-4 py-2 rounded-md text-sm font-medium hover:text-gradient transition-all duration-300 ml-2">
                 {t('navbar.login')}

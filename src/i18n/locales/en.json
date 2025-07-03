@@ -9,7 +9,9 @@
   },
   "hero": {
     "title": "From a",
-    "paperBook": "paper book...",
+    "paperBook": "paper book",
+    "ellipsis": "...",
+    "to": "to",
     "interactiveBook": "to an interactive book",
     "poweredByAI": "powered by AI",
     "withVirtualTutor": "with a virtual tutor",
