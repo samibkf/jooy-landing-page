@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Rocket } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const Navbar = () => {
   const { t } = useTranslation();
@@ -45,6 +46,7 @@ const Navbar = () => {
           </div>
           <div className="hidden md:block">
             <div className="mr-4 flex items-center md:mr-6 space-x-reverse space-x-4">
+              <LanguageSwitcher />
               <button className="glass hover:glass-dark px-4 py-2 rounded-md text-sm font-medium hover:text-gradient transition-all duration-300 ml-2">
                 {t('navbar.login')}
               </button>
@@ -79,7 +81,8 @@ const Navbar = () => {
           <a href="#" className="block px-3 py-2 rounded-md text-base font-medium hover:glass hover:text-gradient transition-all duration-300">
             {t('navbar.contact')}
           </a>
-          <div className="flex space-x-reverse space-x-2 mt-2">
+          <div className="space-y-2 mt-2">
+            <LanguageSwitcher />
             <a href="#" className="block px-3 py-2 rounded-md text-base font-medium glass text-gradient">
               {t('navbar.login')}
             </a>

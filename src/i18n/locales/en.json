@@ -1,0 +1,142 @@
+{
+  "navbar": {
+    "home": "Home",
+    "features": "Features",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "login": "Login",
+    "signUpFree": "Sign Up Free"
+  },
+  "hero": {
+    "title": "From a paper book to...",
+    "interactiveBook": "An interactive book",
+    "poweredByAI": "powered by AI",
+    "withVirtualTutor": "with a virtual tutor",
+    "startCreating": "Start Creating for Free",
+    "seeDemo": "See a Demo"
+  },
+  "howItWorks": {
+    "title": "Create & Share in 3 Simple Steps",
+    "subtitle": "Transform your static books into engaging, interactive learning experiences in minutes.",
+    "step1": {
+      "title": "Add an AI Touch",
+      "description": "Upload your PDF to Jooy Studio. Use our simple tools to define interactive regions and let our AI generate educational guidance."
+    },
+    "step2": {
+      "title": "Add a Tutor",
+      "description": "With one click, add the Virtual Tutor feature to make your book's guidance audible and interactive."
+    },
+    "step3": {
+      "title": "Share Instantly",
+      "description": "Share your interactive book via a QR code. Learners scan it with the Jooy App and start learning immediately."
+    }
+  },
+  "features": {
+    "title": "Powerful Features for",
+    "titleHighlight": "Everyone",
+    "subtitle": "Comprehensive tools for creators and seamless experiences for learners.",
+    "studioTab": "Jooy Studio",
+    "studioTabSubtitle": "For Creators",
+    "appTab": "Jooy App",
+    "appTabSubtitle": "For Learners",
+    "studio": {
+      "interactivePDF": {
+        "title": "Interactive PDF Viewer",
+        "description": "Transform static books by creating clickable regions that bring content to life."
+      },
+      "aiContent": {
+        "title": "AI Content Generation",
+        "description": "Let our AI create helpful guidance and explanations for any section of your book."
+      },
+      "virtualTutor": {
+        "title": "Virtual Tutor Request",
+        "description": "Enable interactive tutors with just one click to make your content audible and engaging."
+      },
+      "drm": {
+        "title": "DRM & Content Protection",
+        "description": "Secure your intellectual property with advanced content protection and access controls."
+      }
+    },
+    "app": {
+      "qrCode": {
+        "title": "Instant QR Code Access",
+        "description": "Students scan QR codes to instantly access interactive learning materials on any device."
+      },
+      "virtualTutors": {
+        "title": "Engaging Virtual Tutors",
+        "description": "AI-powered avatars provide personalized guidance and support throughout the learning journey."
+      },
+      "aiChat": {
+        "title": "AI-Powered Chat",
+        "description": "guides the learner step-by-step, without providing the answer"
+      },
+      "installableApp": {
+        "title": "Installable App",
+        "description": "Install the app on any device for easy access and seamless learning experience."
+      }
+    }
+  },
+  "useCases": {
+    "title": "Designed for the",
+    "titleHighlight": "Modern Education",
+    "subtitle": "Whether you're an individual educator or a large institution, Jooy adapts to your needs.",
+    "teachers": {
+      "title": "For Teachers",
+      "role": "Individual Educators",
+      "description": "Turn standard homework sheets into engaging, guided lessons that students love. Provide instant, AI-powered support without extra prep time.",
+      "benefit": "Save time while increasing student engagement"
+    },
+    "schools": {
+      "title": "For Schools",
+      "role": "Educational Institutions",
+      "description": "Deploy a unified platform for creating and distributing interactive digital curriculum. Modernize your resources and empower your entire faculty.",
+      "benefit": "Scale digital transformation across your institution"
+    },
+    "publishers": {
+      "title": "For Publishers",
+      "role": "Content Creators",
+      "description": "Add a new, premium interactive layer to your existing educational content. Protect your IP with DRM and create new digital revenue streams.",
+      "benefit": "Transform content into premium digital products"
+    }
+  },
+  "testimonials": {
+    "title": "What",
+    "titleHighlight": "our clients",
+    "subtitle": "say",
+    "testimonialSubtitle": "The experiences and opinions of those who have already worked with us."
+  },
+  "cta": {
+    "title": "Step into Education 4.0",
+    "subtitle": "Join hundreds of creators who are transforming their static content into powerful interactive tools. Your first book is on us.",
+    "button": "Sign Up and Start Creating Now"
+  },
+  "footer": {
+    "company": "Company",
+    "aboutUs": "About Us",
+    "careers": "Careers",
+    "blog": "Blog",
+    "news": "News",
+    "services": "Services",
+    "jooyStudio": "Jooy Studio",
+    "jooyApp": "Jooy App",
+    "customApp": "Custom App",
+    "support": "Support",
+    "helpCenter": "Help Center",
+    "contactSupport": "Contact Support",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "followUs": "Follow Us",
+    "newsletter": "Subscribe to our newsletter to stay updated",
+    "yourEmail": "Your email",
+    "copyright": "© 2024 Jooy. All rights reserved."
+  },
+  "notFound": {
+    "title": "404",
+    "subtitle": "Oops! Page not found",
+    "returnHome": "Return to Home"
+  },
+  "language": {
+    "switchToEnglish": "English",
+    "switchToArabic": "العربية"
+  }
+}

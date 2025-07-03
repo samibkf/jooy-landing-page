@@ -1,41 +1,43 @@
 
 import React from 'react';
 import { UserPen, University, LibraryBig } from 'lucide-react';
-
-const useCases = [
-  {
-    icon: UserPen,
-    title: 'For Teachers',
-    role: 'Individual Educators',
-    description: 'Turn standard homework sheets into engaging, guided lessons that students love. Provide instant, AI-powered support without extra prep time.',
-    benefit: 'Save time while increasing student engagement'
-  },
-  {
-    icon: University,
-    title: 'For Schools',
-    role: 'Educational Institutions',
-    description: 'Deploy a unified platform for creating and distributing interactive digital curriculum. Modernize your resources and empower your entire faculty.',
-    benefit: 'Scale digital transformation across your institution'
-  },
-  {
-    icon: LibraryBig,
-    title: 'For Publishers',
-    role: 'Content Creators',
-    description: 'Add a new, premium interactive layer to your existing educational content. Protect your IP with DRM and create new digital revenue streams.',
-    benefit: 'Transform content into premium digital products'
-  }
-];
+import { useTranslation } from 'react-i18next';
 
 const UseCasesSection = () => {
+  const { t } = useTranslation();
+
+  const useCases = [
+    {
+      icon: UserPen,
+      title: t('useCases.teachers.title'),
+      role: t('useCases.teachers.role'),
+      description: t('useCases.teachers.description'),
+      benefit: t('useCases.teachers.benefit')
+    },
+    {
+      icon: University,
+      title: t('useCases.schools.title'),
+      role: t('useCases.schools.role'),
+      description: t('useCases.schools.description'),
+      benefit: t('useCases.schools.benefit')
+    },
+    {
+      icon: LibraryBig,
+      title: t('useCases.publishers.title'),
+      role: t('useCases.publishers.role'),
+      description: t('useCases.publishers.description'),
+      benefit: t('useCases.publishers.benefit')
+    }
+  ];
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-dark-blue/30">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Designed for the <span className="text-gradient">Modern Education</span>
+            {t('useCases.title')} <span className="text-gradient">{t('useCases.titleHighlight')}</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Whether you're an individual educator or a large institution, Jooy adapts to your needs.
+            {t('useCases.subtitle')}
           </p>
         </div>
         
@@ -49,7 +51,7 @@ const UseCasesSection = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 glass rounded-full mr-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-12 h-12 glass rounded-full ml-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <IconComponent 
                       size={24} 
                       stroke="url(#gradient-usecase)"

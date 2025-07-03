@@ -131,5 +131,9 @@
     "title": "404",
     "subtitle": "عفواً! الصفحة غير موجودة",
     "returnHome": "العودة إلى الصفحة الرئيسية"
+  },
+  "language": {
+    "switchToEnglish": "English",
+    "switchToArabic": "العربية"
   }
 }

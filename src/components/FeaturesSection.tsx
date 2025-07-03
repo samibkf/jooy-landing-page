@@ -3,55 +3,55 @@ import React, { useState } from 'react';
 import { LayoutGrid, Sparkles, MessageCircle, Lock, QrCode, UserRound, MousePointerClick } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
-const studioFeatures = [
-  {
-    icon: MousePointerClick,
-    title: 'Interactive PDF Viewer',
-    description: 'Transform static books by creating clickable regions that bring content to life.'
-  },
-  {
-    icon: Sparkles,
-    title: 'AI Content Generation',
-    description: 'Let our AI create helpful guidance and explanations for any section of your book.'
-  },
-  {
-    icon: UserRound,
-    title: 'Virtual Tutor Request',
-    description: 'Enable interactive tutors with just one click to make your content audible and engaging.'
-  },
-  {
-    icon: Lock,
-    title: 'DRM & Content Protection',
-    description: 'Secure your intellectual property with advanced content protection and access controls.'
-  }
-];
-
-const appFeatures = [
-  {
-    icon: QrCode,
-    title: 'Instant QR Code Access',
-    description: 'Students scan QR codes to instantly access interactive learning materials on any device.'
-  },
-  {
-    icon: UserRound,
-    title: 'Engaging Virtual Tutors',
-    description: 'AI-powered avatars provide personalized guidance and support throughout the learning journey.'
-  },
-  {
-    icon: MessageCircle,
-    title: 'AI-Powered Chat',
-    description: 'guides the learner step-by-step, without providing the answer'
-  },
-  {
-    icon: LayoutGrid,
-    title: 'Installable App',
-    description: 'Install the app on any device for easy access and seamless learning experience.'
-  }
-];
-
 const FeaturesSection = () => {
   const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState('studio');
+
+  const studioFeatures = [
+    {
+      icon: MousePointerClick,
+      title: t('features.studio.interactivePDF.title'),
+      description: t('features.studio.interactivePDF.description')
+    },
+    {
+      icon: Sparkles,
+      title: t('features.studio.aiContent.title'),
+      description: t('features.studio.aiContent.description')
+    },
+    {
+      icon: UserRound,
+      title: t('features.studio.virtualTutor.title'),
+      description: t('features.studio.virtualTutor.description')
+    },
+    {
+      icon: Lock,
+      title: t('features.studio.drm.title'),
+      description: t('features.studio.drm.description')
+    }
+  ];
+
+  const appFeatures = [
+    {
+      icon: QrCode,
+      title: t('features.app.qrCode.title'),
+      description: t('features.app.qrCode.description')
+    },
+    {
+      icon: UserRound,
+      title: t('features.app.virtualTutors.title'),
+      description: t('features.app.virtualTutors.description')
+    },
+    {
+      icon: MessageCircle,
+      title: t('features.app.aiChat.title'),
+      description: t('features.app.aiChat.description')
+    },
+    {
+      icon: LayoutGrid,
+      title: t('features.app.installableApp.title'),
+      description: t('features.app.installableApp.description')
+    }
+  ];
 
   const currentFeatures = activeTab === 'studio' ? studioFeatures : appFeatures;
 
@@ -60,10 +60,10 @@ const FeaturesSection = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Powerful Features for <span className="text-gradient">Everyone</span>
+            {t('features.title')} <span className="text-gradient">{t('features.titleHighlight')}</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Comprehensive tools for creators and seamless experiences for learners.
+            {t('features.subtitle')}
           </p>
         </div>
 
@@ -78,8 +78,8 @@ const FeaturesSection = () => {
                   : 'text-gray-600 hover:text-gradient'
               }`}
             >
-              Jooy Studio
-              <span className="block text-xs opacity-75">For Creators</span>
+              {t('features.studioTab')}
+              <span className="block text-xs opacity-75">{t('features.studioTabSubtitle')}</span>
             </button>
             <button
               onClick={() => setActiveTab('app')}
@@ -89,8 +89,8 @@ const FeaturesSection = () => {
                   : 'text-gray-600 hover:text-gradient'
               }`}
             >
-              Jooy App
-              <span className="block text-xs opacity-75">For Learners</span>
+              {t('features.appTab')}
+              <span className="block text-xs opacity-75">{t('features.appTabSubtitle')}</span>
             </button>
           </div>
         </div>
