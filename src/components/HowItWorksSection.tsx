@@ -1,0 +1,93 @@
+import React from 'react';
+import { Sparkles, UserRound, QrCode } from 'lucide-react';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
+
+const steps = [
+  {
+    icon: Sparkles,
+    title: 'Add an AI Touch',
+    description: 'Upload your PDF to Jooy Studio. Use our simple tools to define interactive regions and let our AI generate educational guidance.',
+    image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80'
+  },
+  {
+    icon: UserRound,
+    title: 'Add a Tutor',
+    description: 'With one click, add the Virtual Tutor feature to make your book\'s guidance audible and interactive.',
+    image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80'
+  },
+  {
+    icon: QrCode,
+    title: 'Share Instantly',
+    description: 'Share your interactive book via a QR code. Learners scan it with the Jooy App and start learning immediately.',
+    image: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80'
+  }
+];
+
+const HowItWorksSection = () => {
+  return (
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-dark-blue/30">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16 animate-fade-in-up">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Create & Share in <span className="text-gradient">3 Simple Steps</span>
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Transform your static books into engaging, interactive learning experiences in minutes.
+          </p>
+        </div>
+        
+        <div className="grid md:grid-cols-3 gap-8">
+          {steps.map((step, index) => {
+            const IconComponent = step.icon;
+            return (
+              <div 
+                key={index}
+                className="glass rounded-xl p-6 hover:glass-dark transition-all duration-300 transform hover:-translate-y-2 group animate-fade-in-up relative"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="absolute -top-4 left-6 w-8 h-8 rounded-full gradient-brand flex items-center justify-center text-white font-bold text-sm">
+                  {index + 1}
+                </div>
+                
+                {/* Square Image */}
+                <div className="mb-6 mt-4">
+                  <AspectRatio ratio={1} className="overflow-hidden">
+                    <img 
+                      src={step.image} 
+                      alt={step.title}
+                      className="w-full h-full object-cover rounded-lg glass shadow-lg group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </AspectRatio>
+                </div>
+                
+                <div className="w-14 h-14 glass rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <IconComponent 
+                    size={28} 
+                    stroke="url(#gradient)"
+                    strokeWidth={2}
+                  />
+                  <svg width="0" height="0">
+                    <defs>
+                      <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stopColor="#FF6600" />
+                        <stop offset="100%" stopColor="#EE00FF" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold mb-3 group-hover:text-gradient transition-colors duration-300">
+                  {step.title}
+                </h3>
+                <p className="text-gray-600">
+                  {step.description}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default HowItWorksSection;
