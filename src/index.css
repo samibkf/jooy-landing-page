@@ -104,7 +104,6 @@ All colors MUST be HSL.
     @apply bg-gray-50 text-gray-900 font-cairo;
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
     min-height: 100vh;
-    direction: rtl;
     line-height: 1.8;
   }
 
@@ -145,8 +144,19 @@ All colors MUST be HSL.
     background: linear-gradient(135deg, #FF6600 0%, #EE00FF 100%);
   }
   
+  .gradient-brand-rtl {
+    background: linear-gradient(225deg, #FF6600 0%, #EE00FF 100%);
+  }
+  
   .text-gradient {
     background: linear-gradient(135deg, #FF6600 0%, #EE00FF 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+  }
+  
+  .text-gradient-rtl {
+    background: linear-gradient(225deg, #FF6600 0%, #EE00FF 100%) !important;
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
     background-clip: text !important;

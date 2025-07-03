@@ -4,7 +4,7 @@ import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { useTranslation } from 'react-i18next';
 
 const HowItWorksSection = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   
   const steps = [
     {
@@ -32,7 +32,7 @@ const HowItWorksSection = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            {t('howItWorks.title')} <span className="text-gradient">3 خطوات بسيطة</span>
+            {t('howItWorks.title')} <span className={i18n.language === 'ar' ? 'text-gradient-rtl' : 'text-gradient'}>{t('howItWorks.titleHighlight')}</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             {t('howItWorks.subtitle')}

@@ -17,7 +17,8 @@
     "seeDemo": "See a Demo"
   },
   "howItWorks": {
-    "title": "Create & Share in 3 Simple Steps",
+    "title": "Create & Share in",
+    "titleHighlight": "3 Simple Steps",
     "subtitle": "Transform your static books into engaging, interactive learning experiences in minutes.",
     "step1": {
       "title": "Add an AI Touch",
@@ -107,7 +108,8 @@
     "testimonialSubtitle": "The experiences and opinions of those who have already worked with us."
   },
   "cta": {
-    "title": "Step into Education 4.0",
+    "title": "Step into",
+    "titleHighlight": "Education 4.0",
     "subtitle": "Join hundreds of creators who are transforming their static content into powerful interactive tools. Your first book is on us.",
     "button": "Sign Up and Start Creating Now"
   },

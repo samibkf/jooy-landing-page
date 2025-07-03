@@ -6,17 +6,22 @@ import { useTranslation } from 'react-i18next';
 const HeroSection = () => {
   const { t, i18n } = useTranslation();
   
+  // Set document direction based on language
+  React.useEffect(() => {
+    document.documentElement.dir = i18n.language === 'ar' ? 'rtl' : 'ltr';
+  }, [i18n.language]);
+  
   return (
     <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-dark-blue/30">
       {/* Glowing circles background */}
-      <div className="glow-circle w-[30vw] h-[30vw] top-[20vh] left-[20vw] gradient-brand animate-pulse1"></div>
-      <div className="glow-circle w-[40vw] h-[40vw] bottom-[20vh] right-[20vw] gradient-brand animate-pulse2"></div>
+      <div className={`glow-circle w-[30vw] h-[30vw] top-[20vh] left-[20vw] animate-pulse1 ${i18n.language === 'ar' ? 'gradient-brand-rtl' : 'gradient-brand'}`}></div>
+      <div className={`glow-circle w-[40vw] h-[40vw] bottom-[20vh] right-[20vw] animate-pulse2 ${i18n.language === 'ar' ? 'gradient-brand-rtl' : 'gradient-brand'}`}></div>
       
       <div className="max-w-7xl mx-auto">
         <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
           <div className={`mb-12 lg:mb-0 animate-fade-in-up ${i18n.language === 'ar' ? 'text-right' : 'text-left'}`}>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              {t('hero.title')} <span className="text-gradient">{t('hero.paperBook')}</span>
+              {t('hero.title')} <span className={i18n.language === 'ar' ? 'text-gradient-rtl' : 'text-gradient'}>{t('hero.paperBook')}</span>
             </h1>
             <div className="space-y-6 mb-8 max-w-md mx-auto lg:max-w-lg lg:mx-auto">
               <div className={`flex items-center ${i18n.language === 'ar' ? 'space-x-reverse space-x-4' : 'space-x-4'}`}>
@@ -59,7 +64,7 @@ const HeroSection = () => {
               </svg>
             </div>
             <div className={`flex flex-col sm:flex-row space-y-4 sm:space-y-0 ${i18n.language === 'ar' ? 'sm:space-x-reverse sm:space-x-4' : 'sm:space-x-4'}`}>
-              <button className="gradient-brand text-white hover:opacity-90 px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg">
+              <button className={`text-white hover:opacity-90 px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg ${i18n.language === 'ar' ? 'gradient-brand-rtl' : 'gradient-brand'}`}>
                 {t('hero.startCreating')}
               </button>
               <button className="glass hover:glass-dark px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 flex items-center justify-center group">
