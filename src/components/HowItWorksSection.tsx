@@ -11,19 +11,19 @@ const HowItWorksSection = () => {
       icon: Sparkles,
       title: t('howItWorks.step1.title'),
       description: t('howItWorks.step1.description'),
-      image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80'
+      image: '/media/1.png'
     },
     {
       icon: UserRound,
       title: t('howItWorks.step2.title'),
       description: t('howItWorks.step2.description'),
-      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80'
+      image: '/media/2.png'
     },
     {
       icon: QrCode,
       title: t('howItWorks.step3.title'),
       description: t('howItWorks.step3.description'),
-      image: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80'
+      image: '/media/3.png'
     }
   ];
 

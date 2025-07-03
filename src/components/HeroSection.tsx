@@ -83,10 +83,15 @@ const HeroSection = () => {
           </div>
           <div className="relative animate-fade-in-up flex justify-center" style={{ animationDelay: '0.2s' }}>
             <div className="glass rounded-2xl p-2 animate-float">
-              <img 
-                src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2432&q=80" 
-                alt="Digital Learning Experience" 
+              <video 
+                src="/media/demo.mp4" 
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="metadata"
                 className="rounded-xl shadow-2xl w-60 h-[28rem] object-cover mx-auto"
+                aria-label="Digital Learning Experience Demo"
               />
             </div>
             <div className="absolute -bottom-6 -right-6 glass rounded-xl p-4 w-24 h-24 flex items-center justify-center animate-float" style={{ animationDelay: '1s' }}>
