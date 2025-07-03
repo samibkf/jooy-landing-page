@@ -8,9 +8,8 @@
     "signUpFree": "سجّل مجاناً"
   },
   "hero": {
-    "title": "من",
+    "ellipsis": "...من",
     "paperBook": "كتاب ورقي",
-    "ellipsis": "...",
     "to": "إلى",
     "interactiveBook": "كتاب تفاعلي",
     "poweredByAI": "مدعوم بالذكاء الاصطناعي",

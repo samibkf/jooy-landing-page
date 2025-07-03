@@ -20,10 +20,18 @@ const HeroSection = () => {
       <div className="max-w-7xl mx-auto">
         <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
           <div className={`mb-12 lg:mb-0 animate-fade-in-up ${i18n.language === 'ar' ? 'text-right' : 'text-left'}`}>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              {t('hero.title')} <span className={i18n.language === 'ar' ? 'text-gradient-rtl' : 'text-gradient'}>{t('hero.paperBook')}</span>{t('hero.ellipsis')} {t('hero.to')} {t('hero.interactiveBook')}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-10 leading-tight">
+              {i18n.language === 'ar' ? (
+                <>
+                  {t('hero.ellipsis')} <span className="text-gradient-rtl">{t('hero.paperBook')}</span> {t('hero.to')}
+                </>
+              ) : (
+                <>
+                  {t('hero.title')} <span className="text-gradient">{t('hero.paperBook')}</span> {t('hero.ellipsis')}
+                </>
+              )}
             </h1>
-            <div className="space-y-6 mb-8 max-w-md mx-auto lg:max-w-lg lg:mx-auto">
+            <div className="space-y-6 mb-10 max-w-md mx-auto lg:max-w-lg lg:mx-auto">
               <div className={`flex items-center ${i18n.language === 'ar' ? 'space-x-reverse space-x-4' : 'space-x-4'}`}>
                 <div className="flex-shrink-0">
                   <BookOpenText 
