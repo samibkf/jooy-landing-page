@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
 
 const Navbar = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -45,7 +45,7 @@ const Navbar = () => {
             </div>
           </div>
           <div className="hidden md:block">
-            <div className={`flex items-center ${i18n.language === 'ar' ? 'space-x-reverse space-x-6' : 'space-x-6'}`}>
+            <div className="mr-4 flex items-center md:mr-6 space-x-reverse space-x-4">
               <LanguageSwitcher />
               <button className="glass hover:glass-dark px-4 py-2 rounded-md text-sm font-medium hover:text-gradient transition-all duration-300 ml-2">
                 {t('navbar.login')}
