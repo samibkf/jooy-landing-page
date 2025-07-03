@@ -17,36 +17,36 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-white">Company</h3>
+            <h3 className="text-lg font-semibold mb-4 text-white">{t('footer.company')}</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">About Us</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">Careers</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">Blog</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">News</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">{t('footer.aboutUs')}</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">{t('footer.careers')}</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">{t('footer.blog')}</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">{t('footer.news')}</a></li>
             </ul>
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-white">Services</h3>
+            <h3 className="text-lg font-semibold mb-4 text-white">{t('footer.services')}</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">Jooy Studio</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">Jooy App</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">Custom App</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">{t('footer.jooyStudio')}</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">{t('footer.jooyApp')}</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">{t('footer.customApp')}</a></li>
             </ul>
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-white">Support</h3>
+            <h3 className="text-lg font-semibold mb-4 text-white">{t('footer.support')}</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">Help Center</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">Contact Support</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">Privacy Policy</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">Terms of Service</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">{t('footer.helpCenter')}</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">{t('footer.contactSupport')}</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">{t('footer.privacyPolicy')}</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">{t('footer.termsOfService')}</a></li>
             </ul>
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-white">Follow Us</h3>
+            <h3 className="text-lg font-semibold mb-4 text-white">{t('footer.followUs')}</h3>
             <div className="flex space-x-4 mb-4">
               <a href="#" className="w-10 h-10 rounded-full bg-gray-800 hover:bg-gradient-to-br hover:from-brand-orange hover:to-brand-purple flex items-center justify-center transition-all duration-300 transform hover:scale-110">
                 <Facebook size={18} className="text-white" />
@@ -62,12 +62,12 @@ const Footer = () => {
               </a>
             </div>
             <p className="text-gray-400 text-sm mb-3">
-              Subscribe to our newsletter to stay updated
+              {t('footer.newsletter')}
             </p>
             <form onSubmit={handleSubmit} className="flex">
               <input 
                 type="email" 
-                placeholder="Your email" 
+                placeholder={t('footer.yourEmail')}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="bg-gray-800 text-white px-4 py-2 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-brand-orange w-full"
@@ -89,7 +89,7 @@ const Footer = () => {
             <span className="font-bold text-white">Jooy</span>
           </div>
           <p className="text-gray-400 text-sm">
-            © 2024 Jooy. All rights reserved.
+            {t('footer.copyright')}
           </p>
         </div>
       </div>

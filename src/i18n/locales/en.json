@@ -8,8 +8,9 @@
     "signUpFree": "Sign Up Free"
   },
   "hero": {
-    "title": "From a paper book to...",
-    "interactiveBook": "An interactive book",
+    "title": "From a",
+    "paperBook": "paper book",
+    "interactiveBook": "to an interactive book",
     "poweredByAI": "powered by AI",
     "withVirtualTutor": "with a virtual tutor",
     "startCreating": "Start Creating for Free",

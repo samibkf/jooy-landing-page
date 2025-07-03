@@ -4,7 +4,7 @@ import { Play, BookOpenText, UserRound, Brain } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const HeroSection = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   
   return (
     <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-dark-blue/30">
@@ -14,12 +14,12 @@ const HeroSection = () => {
       
       <div className="max-w-7xl mx-auto">
         <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
-          <div className="mb-12 lg:mb-0 animate-fade-in-up text-right">
+          <div className={`mb-12 lg:mb-0 animate-fade-in-up ${i18n.language === 'ar' ? 'text-right' : 'text-left'}`}>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              {t('hero.title')} <span className="text-gradient">كتاب ورقي</span>
+              {t('hero.title')} <span className="text-gradient">{t('hero.paperBook')}</span>
             </h1>
             <div className="space-y-6 mb-8 max-w-md mx-auto lg:max-w-lg lg:mx-auto">
-              <div className="flex items-center space-x-reverse space-x-4">
+              <div className={`flex items-center ${i18n.language === 'ar' ? 'space-x-reverse space-x-4' : 'space-x-4'}`}>
                 <div className="flex-shrink-0">
                   <BookOpenText 
                     size={28} 
@@ -29,7 +29,7 @@ const HeroSection = () => {
                 </div>
                 <span className="text-xl font-medium text-gray-900">{t('hero.interactiveBook')}</span>
               </div>
-              <div className="flex items-center space-x-reverse space-x-4">
+              <div className={`flex items-center ${i18n.language === 'ar' ? 'space-x-reverse space-x-4' : 'space-x-4'}`}>
                 <div className="flex-shrink-0">
                   <Brain 
                     size={28} 
@@ -39,7 +39,7 @@ const HeroSection = () => {
                 </div>
                 <span className="text-xl font-medium text-gray-900">{t('hero.poweredByAI')}</span>
               </div>
-              <div className="flex items-center space-x-reverse space-x-4">
+              <div className={`flex items-center ${i18n.language === 'ar' ? 'space-x-reverse space-x-4' : 'space-x-4'}`}>
                 <div className="flex-shrink-0">
                   <UserRound 
                     size={28} 
@@ -58,12 +58,12 @@ const HeroSection = () => {
                 </defs>
               </svg>
             </div>
-            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-reverse sm:space-x-4">
+            <div className={`flex flex-col sm:flex-row space-y-4 sm:space-y-0 ${i18n.language === 'ar' ? 'sm:space-x-reverse sm:space-x-4' : 'sm:space-x-4'}`}>
               <button className="gradient-brand text-white hover:opacity-90 px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg">
                 {t('hero.startCreating')}
               </button>
               <button className="glass hover:glass-dark px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 flex items-center justify-center group">
-                <Play className="ml-2 group-hover:text-gradient transition-colors duration-300" size={20} />
+                <Play className={`${i18n.language === 'ar' ? 'ml-2' : 'mr-2'} group-hover:text-gradient transition-colors duration-300`} size={20} />
                 {t('hero.seeDemo')}
               </button>
             </div>

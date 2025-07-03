@@ -8,7 +8,8 @@
     "signUpFree": "سجّل مجاناً"
   },
   "hero": {
-    "title": "...من كتاب ورقي إلى",
+    "title": "...من",
+    "paperBook": "كتاب ورقي",
     "interactiveBook": "كتاب تفاعلي",
     "poweredByAI": "مدعوم بالذكاء الاصطناعي",
     "withVirtualTutor": "مع معلم افتراضي",
@@ -33,6 +34,7 @@
   },
   "features": {
     "title": "ميزات قوية",
+    "titleHighlight": "للجميع",
     "subtitle": "أدوات شاملة للمنشئين وتجربة سلسة للمتعلمين.",
     "studioTab": "استديو جُويْ",
     "studioTabSubtitle": "للمبدعين",
@@ -76,7 +78,8 @@
     }
   },
   "useCases": {
-    "title": "مصمم للتعليم العصري",
+    "title": "مصمم للتعليم",
+    "titleHighlight": "العصري",
     "subtitle": "سواء كنت معلماً أو مؤسسة كبيرة، جُويْ يتكيف مع احتياجاتك.",
     "teachers": {
       "title": "للمعلمين",
