@@ -1,8 +1,10 @@
 
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Rocket } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Navbar = () => {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -25,29 +27,29 @@ const Navbar = () => {
               <Rocket className="text-2xl text-gradient" size={32} />
             </div>
             <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-4">
+              <div className="mr-10 flex items-baseline space-x-reverse space-x-4">
                 <a href="#" className="px-3 py-2 rounded-md text-sm font-medium glass hover:glass-dark text-gradient transition-all duration-300">
-                  Home
+                  {t('navbar.home')}
                 </a>
                 <a href="#" className="px-3 py-2 rounded-md text-sm font-medium hover:glass hover:text-gradient transition-all duration-300">
-                  Features
+                  {t('navbar.features')}
                 </a>
                 <a href="#" className="px-3 py-2 rounded-md text-sm font-medium hover:glass hover:text-gradient transition-all duration-300">
-                  Pricing
+                  {t('navbar.pricing')}
                 </a>
                 <a href="#" className="px-3 py-2 rounded-md text-sm font-medium hover:glass hover:text-gradient transition-all duration-300">
-                  Contact
+                  {t('navbar.contact')}
                 </a>
               </div>
             </div>
           </div>
           <div className="hidden md:block">
-            <div className="ml-4 flex items-center md:ml-6 space-x-4">
-              <button className="glass hover:glass-dark px-4 py-2 rounded-md text-sm font-medium hover:text-gradient transition-all duration-300 mr-2">
-                Login
+            <div className="mr-4 flex items-center md:mr-6 space-x-reverse space-x-4">
+              <button className="glass hover:glass-dark px-4 py-2 rounded-md text-sm font-medium hover:text-gradient transition-all duration-300 ml-2">
+                {t('navbar.login')}
               </button>
               <button className="gradient-brand text-white hover:opacity-90 px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 transform hover:scale-105">
-                Sign Up Free
+                {t('navbar.signUpFree')}
               </button>
             </div>
           </div>
@@ -66,23 +68,23 @@ const Navbar = () => {
       <div className={`md:hidden transition-all duration-300 ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 glass-dark">
           <a href="#" className="block px-3 py-2 rounded-md text-base font-medium glass text-gradient">
-            Home
+            {t('navbar.home')}
           </a>
           <a href="#" className="block px-3 py-2 rounded-md text-base font-medium hover:glass hover:text-gradient transition-all duration-300">
-            Features
+            {t('navbar.features')}
           </a>
           <a href="#" className="block px-3 py-2 rounded-md text-base font-medium hover:glass hover:text-gradient transition-all duration-300">
-            Pricing
+            {t('navbar.pricing')}
           </a>
           <a href="#" className="block px-3 py-2 rounded-md text-base font-medium hover:glass hover:text-gradient transition-all duration-300">
-            Contact
+            {t('navbar.contact')}
           </a>
-          <div className="flex space-x-2 mt-2">
+          <div className="flex space-x-reverse space-x-2 mt-2">
             <a href="#" className="block px-3 py-2 rounded-md text-base font-medium glass text-gradient">
-              Login
+              {t('navbar.login')}
             </a>
             <a href="#" className="block px-3 py-2 rounded-md text-base font-medium gradient-brand text-white">
-              Sign Up Free
+              {t('navbar.signUpFree')}
             </a>
           </div>
         </div>

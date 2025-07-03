@@ -1,38 +1,41 @@
 import React from 'react';
 import { Sparkles, UserRound, QrCode } from 'lucide-react';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
-
-const steps = [
-  {
-    icon: Sparkles,
-    title: 'Add an AI Touch',
-    description: 'Upload your PDF to Jooy Studio. Use our simple tools to define interactive regions and let our AI generate educational guidance.',
-    image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80'
-  },
-  {
-    icon: UserRound,
-    title: 'Add a Tutor',
-    description: 'With one click, add the Virtual Tutor feature to make your book\'s guidance audible and interactive.',
-    image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80'
-  },
-  {
-    icon: QrCode,
-    title: 'Share Instantly',
-    description: 'Share your interactive book via a QR code. Learners scan it with the Jooy App and start learning immediately.',
-    image: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80'
-  }
-];
+import { useTranslation } from 'react-i18next';
 
 const HowItWorksSection = () => {
+  const { t } = useTranslation();
+  
+  const steps = [
+    {
+      icon: Sparkles,
+      title: t('howItWorks.step1.title'),
+      description: t('howItWorks.step1.description'),
+      image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80'
+    },
+    {
+      icon: UserRound,
+      title: t('howItWorks.step2.title'),
+      description: t('howItWorks.step2.description'),
+      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80'
+    },
+    {
+      icon: QrCode,
+      title: t('howItWorks.step3.title'),
+      description: t('howItWorks.step3.description'),
+      image: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80'
+    }
+  ];
+
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-dark-blue/30">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Create & Share in <span className="text-gradient">3 Simple Steps</span>
+            {t('howItWorks.title')} <span className="text-gradient">3 خطوات بسيطة</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Transform your static books into engaging, interactive learning experiences in minutes.
+            {t('howItWorks.subtitle')}
           </p>
         </div>
         
@@ -45,7 +48,7 @@ const HowItWorksSection = () => {
                 className="glass rounded-xl p-6 hover:glass-dark transition-all duration-300 transform hover:-translate-y-2 group animate-fade-in-up relative"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="absolute -top-4 left-6 w-8 h-8 rounded-full gradient-brand flex items-center justify-center text-white font-bold text-sm">
+                <div className="absolute -top-4 right-6 w-8 h-8 rounded-full gradient-brand flex items-center justify-center text-white font-bold text-sm">
                   {index + 1}
                 </div>
                 

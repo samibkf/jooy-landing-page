@@ -101,9 +101,28 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-gray-50 text-gray-900;
+    @apply bg-gray-50 text-gray-900 font-cairo;
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
     min-height: 100vh;
+    direction: rtl;
+    line-height: 1.8;
+  }
+
+  /* Arabic typography improvements */
+  .arabic-text {
+    font-family: 'Cairo', sans-serif;
+    line-height: 2;
+    letter-spacing: 0.02em;
+  }
+
+  /* RTL specific adjustments */
+  .rtl-flex {
+    flex-direction: row-reverse;
+  }
+
+  .rtl-space > * + * {
+    margin-right: 1rem;
+    margin-left: 0;
   }
 }
 

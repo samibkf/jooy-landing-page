@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { Rocket, Send, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+  const { t } = useTranslation();
   const [email, setEmail] = useState('');
 
   const handleSubmit = (e: React.FormEvent) => {

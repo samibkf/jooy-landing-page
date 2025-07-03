@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import { LayoutGrid, Sparkles, MessageCircle, Lock, QrCode, UserRound, MousePointerClick } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const studioFeatures = [
   {
@@ -49,6 +50,7 @@ const appFeatures = [
 ];
 
 const FeaturesSection = () => {
+  const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState('studio');
 
   const currentFeatures = activeTab === 'studio' ? studioFeatures : appFeatures;
