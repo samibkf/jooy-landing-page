@@ -25,11 +25,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <img 
-                src="/logo.svg" 
-                alt="Logo" 
-                className={`w-8 h-8 ${i18n.language === 'ar' ? 'logo-gradient-rtl' : 'logo-gradient'}`}
-              />
+              <div className={`w-12 h-12 ${i18n.language === 'ar' ? 'logo-gradient-rtl' : 'logo-gradient'}`} />
             </div>
             <div className="hidden md:block">
               <div className="mr-10 flex items-baseline space-x-reverse space-x-4">
