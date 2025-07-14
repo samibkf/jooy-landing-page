@@ -17,6 +17,10 @@
     "startCreating": "Start Creating for Free",
     "seeDemo": "See a Demo"
   },
+  "demo": {
+    "title": "Product Demo",
+    "description": "See how Jooy transforms static books into interactive learning experiences"
+  },
   "howItWorks": {
     "title": "Create & Share in",
     "titleHighlight": "3 Simple Steps",

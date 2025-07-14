@@ -2,6 +2,14 @@
 import React from 'react';
 import { Play, BookOpenText, UserRound, Brain } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from '@/components/ui/dialog';
 
 const HeroSection = () => {
   const { t, i18n } = useTranslation();
@@ -75,10 +83,38 @@ const HeroSection = () => {
               <button className={`text-white hover:opacity-90 px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg ${i18n.language === 'ar' ? 'gradient-brand-rtl' : 'gradient-brand'}`}>
                 {t('hero.startCreating')}
               </button>
-              <button className="glass hover:glass-dark px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 flex items-center justify-center group">
-                <Play className={`${i18n.language === 'ar' ? 'ml-2' : 'mr-2'} transition-colors duration-300 ${i18n.language === 'ar' ? 'group-hover:text-gradient-rtl' : 'group-hover:text-gradient'}`} size={20} />
-                {t('hero.seeDemo')}
-              </button>
+              <Dialog>
+                <DialogTrigger asChild>
+                  <button className="glass hover:glass-dark px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 flex items-center justify-center group">
+                    <Play className={`${i18n.language === 'ar' ? 'ml-2' : 'mr-2'} transition-colors duration-300 ${i18n.language === 'ar' ? 'group-hover:text-gradient-rtl' : 'group-hover:text-gradient'}`} size={20} />
+                    {t('hero.seeDemo')}
+                  </button>
+                </DialogTrigger>
+                <DialogContent className="max-w-5xl w-full max-w-[95vw] max-h-[95vh] p-0">
+                  <DialogHeader className="p-6 pb-0">
+                    <DialogTitle className={`text-2xl font-bold ${i18n.language === 'ar' ? 'text-right' : 'text-left'}`}>
+                      {t('demo.title')}
+                    </DialogTitle>
+                    <DialogDescription className={`text-muted-foreground ${i18n.language === 'ar' ? 'text-right' : 'text-left'}`}>
+                      {t('demo.description')}
+                    </DialogDescription>
+                  </DialogHeader>
+                  <div className="px-6 pb-6">
+                    <div style={{ position: 'relative', boxSizing: 'content-box', maxHeight: '80vh', width: '100%', aspectRatio: '1.7777777777777777', padding: '0' }}>
+                      <iframe 
+                        src="https://app.supademo.com/embed/cmd1nzhkv00fhvm0icjfwiupc?embed_v=2" 
+                        loading="lazy" 
+                        title="Jooy Demo" 
+                        allow="clipboard-write" 
+                        frameBorder="0" 
+                        allowFullScreen
+                        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', borderRadius: '8px' }}
+                        className="shadow-lg"
+                      />
+                    </div>
+                  </div>
+                </DialogContent>
+              </Dialog>
             </div>
           </div>
           <div className="relative animate-fade-in-up flex justify-center" style={{ animationDelay: '0.2s' }}>
