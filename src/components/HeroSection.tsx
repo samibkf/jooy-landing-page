@@ -80,9 +80,9 @@ const HeroSection = () => {
               </svg>
             </div>
             <div className={`flex flex-col sm:flex-row space-y-4 sm:space-y-0 ${i18n.language === 'ar' ? 'sm:space-x-reverse sm:space-x-4' : 'sm:space-x-4'}`}>
-              <button className={`text-white hover:opacity-90 px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg ${i18n.language === 'ar' ? 'gradient-brand-rtl' : 'gradient-brand'}`}>
+              <a href="https://studio.jooy.site" target="_blank" rel="noopener noreferrer" className={`text-white hover:opacity-90 px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg ${i18n.language === 'ar' ? 'gradient-brand-rtl' : 'gradient-brand'}`}>
                 {t('hero.startCreating')}
-              </button>
+              </a>
               <Dialog>
                 <DialogTrigger asChild>
                   <button className="glass hover:glass-dark px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 flex items-center justify-center group">

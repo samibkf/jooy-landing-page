@@ -47,12 +47,12 @@ const Navbar = () => {
           <div className="hidden md:block">
             <div className="mr-4 flex items-center md:mr-6 space-x-reverse space-x-6">
               <LanguageSwitcher />
-              <button className={`glass hover:glass-dark px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 ml-2 ${i18n.language === 'ar' ? 'hover:text-gradient-rtl' : 'hover:text-gradient'}`}>
+              <a href="https://studio.jooy.site" target="_blank" rel="noopener noreferrer" className={`glass hover:glass-dark px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 ml-2 ${i18n.language === 'ar' ? 'hover:text-gradient-rtl' : 'hover:text-gradient'}`}>
                 {t('navbar.login')}
-              </button>
-              <button className="gradient-brand text-white hover:opacity-90 px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 transform hover:scale-105">
+              </a>
+              <a href="https://studio.jooy.site" target="_blank" rel="noopener noreferrer" className="gradient-brand text-white hover:opacity-90 px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 transform hover:scale-105">
                 {t('navbar.signUpFree')}
-              </button>
+              </a>
             </div>
           </div>
           <div className="-mr-2 flex md:hidden">
@@ -83,10 +83,10 @@ const Navbar = () => {
           </a>
           <div className="space-y-2 mt-2">
             <LanguageSwitcher />
-            <a href="#" className="block px-3 py-2 rounded-md text-base font-medium glass text-gradient">
+            <a href="https://studio.jooy.site" target="_blank" rel="noopener noreferrer" className="block px-3 py-2 rounded-md text-base font-medium glass text-gradient">
               {t('navbar.login')}
             </a>
-            <a href="#" className="block px-3 py-2 rounded-md text-base font-medium gradient-brand text-white">
+            <a href="https://studio.jooy.site" target="_blank" rel="noopener noreferrer" className="block px-3 py-2 rounded-md text-base font-medium gradient-brand text-white">
               {t('navbar.signUpFree')}
             </a>
           </div>
